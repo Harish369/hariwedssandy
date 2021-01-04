@@ -1,0 +1,215 @@
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat); */
+
+html,
+body {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: lightgray;
+    font-size: 80px;
+    margin-bottom: 400px;
+    text-align: center;
+    text-shadow: 1px 1px 4px #381015;
+}
+
+h2 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    letter-spacing: 5px;
+    padding: 5px 40px;
+    margin-top: 0;
+    margin-bottom: 100px;
+    font-family: 'Rajdhani', sans-serif;
+    text-shadow: 2px 2px 4px #381015;
+}
+
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 130vh;
+    position: fixed;
+    width: 100%;
+    transform: translateY(30vh);
+    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.background:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.background:first-child {
+    background-image: url(./images/2.PNG);
+    transform: translateY(-15vh);
+}
+
+.background:first-child .content-wrapper {
+    transform: translateY(15vh);
+}
+
+.background:nth-child(2) {
+    background-image: url(./images/6.JPG);
+}
+
+.background:nth-child(3) {
+    background-image: url(./images/12.JPG);
+}
+
+
+/* Set stacking context of slides */
+
+.background:nth-child(1) {
+    z-index: 3;
+}
+
+.background:nth-child(2) {
+    z-index: 2;
+}
+
+.background:nth-child(3) {
+    z-index: 1;
+}
+
+.content-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column nowrap;
+    color: #fff;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    transform: translateY(40vh);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.content-title1 {
+    font-size: 6vh;
+    line-height: 1.4;
+    font-family: 'Pacifico', cursive;
+    font-size: 6em;
+    margin: 0;
+    padding-top: 50px;
+    margin-left: -5px;
+    margin-bottom: -2.3em;
+    transform: rotate(-10deg);
+    /* font-family: 'Tangerine', cursive;
+    color: white;
+    font-size: 130px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 4px #381015;
+    color: lightgray */
+}
+
+.background.up-scroll {
+    transform: translate3d(0, -15vh, 0);
+}
+
+.background.up-scroll .content-wrapper {
+    transform: translateY(15vh);
+}
+
+.background.up-scroll+.background {
+    transform: translate3d(0, 30vh, 0);
+}
+
+.background.up-scroll+.background .content-wrapper {
+    transform: translateY(30vh);
+}
+
+.background.down-scroll {
+    transform: translate3d(0, -130vh, 0);
+}
+
+.background.down-scroll .content-wrapper {
+    transform: translateY(40vh);
+}
+
+.background.down-scroll+.background:not(.down-scroll) {
+    transform: translate3d(0, -15vh, 0);
+}
+
+.background.down-scroll+.background:not(.down-scroll) .content-wrapper {
+    transform: translateY(15vh);
+}
+
+.fancy-text div {
+    font-family: 'Pacifico', cursive;
+    font-size: 7em;
+    margin: 0;
+    padding-top: 0;
+    margin-left: 200px;
+    margin-bottom: 0.5em;
+    transform: rotate(-10deg);
+}
+
+.text-white {
+    color: #fff;
+}
+
+.fill {
+    height: 100%;
+    width: 100%;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.banner {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    letter-spacing: 5px;
+    padding: 5px 40px;
+    margin-top: 0;
+    margin-bottom: 100px;
+    font-family: 'Rajdhani', sans-serif;
+    text-shadow: 2px 2px 4px #381015;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+
+/** Header CSS **/
+
+#date {
+    margin-top: -0.6em;
+    font-size: 4em;
+    margin-bottom: 1em;
+    color: lightgray;
+}
