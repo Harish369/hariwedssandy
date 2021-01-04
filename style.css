@@ -28,6 +28,20 @@ h2 {
     text-shadow: 2px 2px 4px #381015;
 }
 
+h3 {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    /* border-top: 5px solid white;
+    border-bottom: 5px solid white; */
+    letter-spacing: 5px;
+    padding: 5px 40px;
+    margin-top: 0;
+    margin-bottom: 70px;
+    font-family: 'Rajdhani', sans-serif;
+    text-shadow: 2px 2px 4px #381015;
+}
+
 .background {
     background-size: cover;
     background-repeat: no-repeat;
@@ -156,7 +170,7 @@ h2 {
 
 .fancy-text div {
     font-family: 'Pacifico', cursive;
-    font-size: 7em;
+    font-size: 5em;
     margin: 0;
     padding-top: 0;
     margin-left: 200px;
@@ -212,4 +226,36 @@ h2 {
     font-size: 4em;
     margin-bottom: 1em;
     color: lightgray;
+}
+
+ul#countdown {
+    /* position: relative;
+    top: 50%; */
+    transform: translateY(-50%);
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0 20px 0;
+    color: #fff;
+    border: 1px solid #adafb2;
+    border-width: 1px 0;
+    overflow: hidden;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+li {
+    margin: 0 -3px 0 0;
+    padding: 0;
+    display: inline-block;
+    width: 25%;
+    font-size: 72px;
+    font-size: 6vw;
+    text-align: center;
+}
+
+label {
+    color: #adafb2;
+    font-size: 18px;
+    font-size: 1.5vw;
+    text-transform: uppercase;
 }
